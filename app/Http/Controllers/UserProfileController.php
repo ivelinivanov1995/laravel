@@ -31,6 +31,12 @@ class UserProfileController extends Controller
         return view('user-profile.edit')->with('userData', $user);
     }
 
+    /**
+     * Save user profile
+     *
+     * @param Request $request
+     * @return \Illuminate\Http\RedirectResponse|\Illuminate\Routing\Redirector
+     */
     public function save(Request $request)
     {
         $user = Auth::user();
