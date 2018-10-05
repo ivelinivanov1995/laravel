@@ -16,3 +16,5 @@ Password: (none)<br>
 
 Email: `cjdemo@tp.net`<br>
 Password: `Helloworld`<br>
+
+Note: There is no input validation applied on any forms. 
