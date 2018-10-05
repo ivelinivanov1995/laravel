@@ -18,7 +18,6 @@
 
         <a id="user-profile" href="{{url('user-profile/edit')}}">User Profile</a>
 
-
     </div>
 
 
