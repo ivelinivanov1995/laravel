@@ -14,8 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
 Auth::routes();
+Route::get('/logout', 'Auth\LoginController@logout')->name('logout');
+
+
 Route::group(['prefix' => 'user-profile', 'middleware' => 'auth'], function () {
     Route::get('/edit', 'UserProfileController@edit')->name('editProfile');
     Route::post('/save', 'UserProfileController@save')->name('saveProfile');
 });
+
