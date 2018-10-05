@@ -31,4 +31,15 @@ class UserProfileController extends Controller
         return view('user-profile.edit')->with('userData', $user);
     }
 
+    public function save(Request $request)
+    {
+        $user = Auth::user();
+
+        $inputs = $request->all();
+
+        $user->fill($inputs);
+        $user->save();
+
+        return redirect('user-profile/edit');
+    }
 }
