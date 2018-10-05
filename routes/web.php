@@ -15,3 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 Auth::routes();
+Route::group(['prefix' => 'user-profile', 'middleware' => 'auth'], function () {
+    Route::get('/edit', 'UserProfileController@edit')->name('editProfile');
+    Route::post('/save', 'UserProfileController@save')->name('saveProfile');
+});
